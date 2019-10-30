@@ -431,7 +431,7 @@ inline StringView::UpconvertedCharacters::UpconvertedCharacters(const StringView
         return;
     }
     const LChar* characters8 = string.characters8();
-    unsigned length = string.m_length;
+    unsigned length = string.m_length + 1;
     m_upconvertedCharacters.reserveInitialCapacity(length);
     for (unsigned i = 0; i < length; ++i)
         m_upconvertedCharacters.uncheckedAppend(characters8[i]);
